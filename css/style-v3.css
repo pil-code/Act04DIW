@@ -75,18 +75,26 @@ big{
 }
 
 /****** Estética de los botones *****/
-.boton{
+.boton, nav li a{
     border: 1px solid #AA8A7B;
     background-color: #F2EDEA;
-    list-style: none;
     text-decoration: none;
-    width: 30%;
+    width: 150px;
     font-family: Montserrat;
     font-weight: bold;
     color: #AA8A7B;
     text-align: center;
     padding: 20px 20px;
     margin:0;
+    display: block;
+}
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin:0;
+    width: 100%;
 }
 
 /*Cambia el formato de los botones de la barra de navegación
@@ -97,11 +105,16 @@ a:hover {
     color: #ffffff;
 }
 
+nav#barra {
+    border:1px black solid;
+    position:sticky;
+}
+
 /************************* GRID *************************/
 /*1º: creamos el contenedor grid de toda la pag*/
 .grid{
     display:grid;
-    grid-template-columns: 20% 58% 20%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
     gap:1%;
     justify-items: stretch;
@@ -110,24 +123,24 @@ a:hover {
 /*2º: aplicamosla clase item-grid a los principales elementos
 para crear la estructura: header, barra, main y footer*/
 .grid .item-grid{
-    /*background-color: lightsteelblue;*/
-    border:1px solid black;
+    
+    border:1px solid black;  /*BORRAR*/
 }
 
 /*3º: indicamos las áreas de cada elementos principal*/
 .item-grid#header{
-    grid-column: 1/4;
+    grid-column: 1/5;
     min-height: 100vh; /*ocupa toda la pantalla */
 }
 .item-grid#main{
-    grid-column: 2/3;
+    grid-column: 2/4;
     grid-row-start: 2;
 }
 .item-grid#barra{
-    grid-column: 3/4;
+    grid-column: 4/5;
 }
 footer.item-grid{
-    grid-column: 1/4;
+    grid-column: 1/5;
 }
 
 /*4º:Trabajamos grid en cada elemento principal*/
@@ -137,11 +150,10 @@ footer.item-grid{
 /*Creamos cuadrícula en el header*/
 header.nested-grid{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    border:1px solid red;
     background:rgba(91, 164, 176,0.75);
     background-position: center;
     background-repeat: no-repeat;
@@ -150,16 +162,30 @@ header.nested-grid{
 
 /*contenedor con el nombre y título*/
 header .contenedor-txt{
-    grid-column: 2/3;
+    grid-column: 2/4;
     grid-row: 2/3;
 }
 
+/*posicionamos el boton hola*/
 header .boton{
-    grid-column: 3/4;
+    grid-column: 4/5;
     grid-row: 3/4;
     justify-self: end;
     align-self: end;
 }
+
+
+/*ELEMENTO NAV*/
+
+/*posicionamos la barra*/
+nav{
+    display:inline-grid;
+    justify-content: end;
+}
+
+    
+
+
 
 
 
