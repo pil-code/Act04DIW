@@ -94,8 +94,7 @@ big{
 
 .bg-gris{
     background-color: #E6E7E9;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding: 3%;
 }
 
 /****** Estética de los botones *****/
@@ -247,6 +246,44 @@ section#referencias{
 section#contacto{
     grid-area: contacto;
 }
+
+
+/********** EXPERIENCIA ********/
+
+/*contenedor grid de la experiencia*/
+.contenedor-30-70{
+    display:grid;
+    grid-template-columns: 30% 70%;
+    align-content: stretch; 
+    width:100%;
+    margin:20px 0;
+    row-gap: 3em;
+}
+
+
+/*primera columna*/
+div.col30{
+    display:grid;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(91,176,167, 0.4);
+    width: 95%;
+    padding: 2%;
+}
+
+div.col30 p{
+     width: 100%; 
+}
+
+/*segunda columna*/
+div.col70{
+    display: grid;
+    justify-items: center;
+    width: 92%;
+    padding: 3%;
+}
+
 
 /********** FORM CONTACTO ***********/
 
