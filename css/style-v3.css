@@ -74,6 +74,20 @@ big{
     font-weight: 500;
 }
 
+/*******Fondos************/
+
+.bg-blanco{
+    background-color: #ffffff;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.bg-gris{
+    background-color: #E6E7E9;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
 /****** Estética de los botones *****/
 .boton, nav li a{
     border: 1px solid #AA8A7B;
@@ -116,7 +130,7 @@ nav#barra {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    gap:1%;
+    gap:0;
     justify-items: stretch;
     align-items:stretch;
 }
@@ -170,7 +184,7 @@ header .contenedor-txt{
 header .boton{
     grid-column: 4/5;
     grid-row: 3/4;
-    justify-self: end;
+    justify-self: center;
     align-self: end;
 }
 
@@ -180,12 +194,49 @@ header .boton{
 /*posicionamos la barra*/
 nav{
     display:inline-grid;
-    justify-content: end;
+    justify-content: center;
 }
 
+
+
+/*ELEMENTO MAIN*/
     
+/*creamos una cuadricula para todo el main con 6 col*/
+main.nested-grid{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "perfil perfil perfil perfil perfil perfil"
+        "experiencia experiencia experiencia experiencia experiencia experiencia"
+        "formacion formacion formacion formacion formacion formacion"
+        "habilidades habilidades habilidades habilidades habilidades habilidades"
+        "proyectos proyectos proyectos proyectos proyectos proyectos"
+        "referencias referencias referencias referencias referencias referencias"
+        "contacto contacto contacto contacto contacto contacto"
+}
 
-
+/*Indicamos el nombre de cada grid area*/
+section#perfil{
+    grid-area: perfil;
+}
+section#experiencia{
+    grid-area: experiencia;
+}
+section#formacion{
+    grid-area: formacion;
+}
+section#habilidades{
+    grid-area: habilidades;
+}
+section#proyectos{
+    grid-area: proyectos;
+}
+section#referencias{
+    grid-area: referencias;
+}
+section#contacto{
+    grid-area: contacto;
+}
 
 
 
