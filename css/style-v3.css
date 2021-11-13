@@ -149,7 +149,6 @@ nav#barra {
 /*2º: aplicamosla clase item-grid a los principales elementos
 para crear la estructura: header, barra, main y footer*/
 .grid .item-grid{
-    
     border:1px dotted greenyellow;  /*BORRAR*/
 }
 
@@ -250,6 +249,38 @@ section#contacto{
     grid-area: contacto;
 }
 
+/********** PERFIL ********/
+/*creamos una cuadricula para todo el perfil con 6 col*/
+#contenedor-perfil{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2%;
+    margin:20px 0;
+    align-items:start;
+}
+/*indicamos el area de cada item*/
+#aboutme-cont{
+    grid-column: 1/3;
+    display: grid;
+}
+#thisisme-cont{
+    grid-column: 3/5;
+    align-self: center;
+}
+#detalles-cont{
+    grid-column: 5/7;
+    display: grid;
+}
+
+/*Formato de la foto*/
+#mi-foto {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 90%;
+    display:block;
+    margin: auto;
+}
 
 /********** EXPERIENCIA Y FORMACIÓN ********/
 
@@ -289,7 +320,6 @@ div.col70{
     padding: 3%;
 }
 
-/********** FORMACIÓN ********/
 
 
 /********** FORM CONTACTO ***********/
@@ -357,8 +387,6 @@ form{
     border: none;
 } 
 
-
-
     
 /*Boton de enviar*/
 input[type=submit] {
@@ -376,28 +404,73 @@ input[type=submit] {
     justify-self: end;
 }
 
-/*Cuando se reduce el tamaño del navegador*/
+
+/*******************MEDIA QUERIES*******************/
+
+
 @media (max-width: 1300px) {
+    /*Cuando se reduce el tamaño del navegador
+    las columnas laterales se reducen*/
     .grid{
         display:grid;
         grid-template-columns: 1fr 15fr 1fr;
         gap:2%;
     }
 
+    /*la ubicacion del booton inicial cambia*/
     header .boton{
         grid-column: 4/5;
         grid-row: 3/4;
         justify-self: end;
         align-self: end;
     }
-
+    /*la ubicacion del main cambia*/
     .item-grid#main{
         grid-column: 2/3;
         grid-row-start: 2;
     }
+    /*cambiamos la ubicacion de los txt e imagen del perfil*/
+    #contenedor-perfil {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "aboutme foto"
+        "detalles detalles"
+        ;
+    }
+
+    /*cambios de ubicacion en la seccion perfil*/
+    #aboutme-cont{
+        display: block;
+    }
+
+    #detalles-cont{
+        margin-top: 2%;
+    }
+
+    #detalles{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 5%;
+    }
+
+    /*Indicamos el nombre de cada grid area
+    para poder cambiarles la posicion*/
+    div#aboutme-cont{
+        grid-area: aboutme;
+    }
+    div#detalles-cont{
+        grid-area: detalles;
+    }
+    div#thisisme-cont{
+        grid-area: foto;
+    }
+    
 }
 
+
+
 @media (max-width: 680px) {
+/*El boton inicial y la barra desaparece*/
 #barra, a.boton {
     display: none;
 }
@@ -405,9 +478,22 @@ input[type=submit] {
 /*En dispositivo móvil*/
 @media (max-width: 500px) {
     
-    /* se reducen los espacios de los lados*/
+    /* se reducen los espacios de los lados en el header*/
     header.nested-grid {
         grid-template-rows: 0.5fr 1fr 0.5fr;
+    }
+
+    /*En el perfil, cada elemento aparece en una fila*/
+    #contenedor-perfil{
+        display:inline-grid;
+        grid-auto-rows: auto;
+        row-gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "foto"
+        "aboutme"
+        "detalles"
+        ;
     }
 
     /*la formación/experiencia aparece en una columna*/
