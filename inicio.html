@@ -9,49 +9,26 @@
         <link rel="icon" type="image/jpg" href="images/header_01.jpg" />
     </head>
 
-    <body class="container">
-        <header class="item"  style="background-image: url(images/chica-it.png)";>
-            <div>
-                <h1>Pilar Navío Colón</h1>
-                <h3 class="blanco">Web Developer</h3>
-            </div>
-            <a href=#perfil>¡Hola!</a>
-        </header>
-
-        <nav class="item">
-            <ul class="vacio">
-                <li><a href=#perfil>Perfil</a></li>
-                <li><a href=#experiencia>Experiencia</a></li>
-                <li><a href=#formacion>Formación</a></li>
-                <li><a href=#habilidades>Habilidades</a></li>
-                <li><a href=#proyectos>Proyectos</a></li>
-                <li><a href=#referencias>Referencias</a></li>
-                <li><a href=#contacto>Contacto</a></li>
-            </ul>
-        </nav>
-
-        <main class= "item">
-            <section class="item-perfil bg-blanco" id="perfil">
-                <div>
-                    <h2>Perfil</h2>
-                    <p>Soy <big>e-learning</big> developer en proceso de ser <big>web developer</big></p>
+    <body>
+        <div class="grid">
+            <header class="item-grid nested-grid" id="header">
+                <div class="contenedor-txt">
+                    <h1>Pilar Navío Colón</h1>
+                    <h3 class="blanco">Web Developer</h3>
                 </div>
-                <hr> <!--línea separadora-->
-                    <div id="presentacion">
-                        <div class="columna3" id="aboutme">
-                            <h3>Sobre mí</h3>
-                            <p>La curiosidad me ha llevado por los caminos de la neurociencia, el diseño instruccional y la educación elearning. Ahora empiezo a despegar en mi aventura por el <big>desarrollo web</big>.<br><br>
-                            Me gusta cuidar los detalles, la organización y disfruto trabajando en equipo.</p>
-                        </div>
+                <a class="boton" href=#perfil>¡Hola!</a>
+            </header>
 
-                        <div class="columna3" >
-                            <img id="mi-foto" src="images/thisisme.jpg" alt="mi foto">
-                        </div>
-                    </div>
+            <nav class="item-grid" id="barra">
+                nav
+            </nav>
 
-            </section>
-        </main>
+            <main  class="item-grid" id="main">
+                main
+            </main>
 
-        <footer class="item">
-        </footer>
+            <footer  class="item-grid">
+                footer
+            </footer>
+        </div>
     </body>
