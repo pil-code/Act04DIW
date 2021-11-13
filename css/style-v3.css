@@ -73,6 +73,10 @@ h2 + p{
 big{
     font-weight: 500;
 }
+/*Fuente pequeña utilizando una clase*/
+.small{
+    font-size:12px;
+}
 
 /*Fuente cursiva una clase*/
 .cursiva{
@@ -88,8 +92,7 @@ big{
 
 .bg-blanco{
     background-color: #ffffff;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding: 3%;
 }
 
 .bg-gris{
@@ -248,12 +251,13 @@ section#contacto{
 }
 
 
-/********** EXPERIENCIA ********/
+/********** EXPERIENCIA Y FORMACIÓN ********/
 
-/*contenedor grid de la experiencia*/
+/*contenedor grid de la experiencia/formación*/
 .contenedor-30-70{
     display:grid;
     grid-template-columns: 30% 70%;
+    grid-auto-rows: minmax(150px, auto);
     align-content: stretch; 
     width:100%;
     margin:20px 0;
@@ -280,9 +284,12 @@ div.col30 p{
 div.col70{
     display: grid;
     justify-items: center;
+    align-items: stretch;
     width: 92%;
     padding: 3%;
 }
+
+/********** FORMACIÓN ********/
 
 
 /********** FORM CONTACTO ***********/
@@ -291,6 +298,7 @@ div.col70{
 form.nested-grid {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    
     grid-template-areas:
         "nombre email"
         "mensaje mensaje"
@@ -397,12 +405,23 @@ input[type=submit] {
 /*En dispositivo móvil*/
 @media (max-width: 500px) {
     
-
+    /* se reducen los espacios de los lados*/
     header.nested-grid {
         grid-template-rows: 0.5fr 1fr 0.5fr;
     }
 
-    
+    /*la formación/experiencia aparece en una columna*/
+    .contenedor-30-70{
+        display:inline-grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        row-gap: 0;
+    }
+    div.col70{
+        margin-bottom: 15%;
+    }
+
+    /*nombre e email en filas unicas*/
     form.nested-grid {
         grid-template-areas:
             "nombre nombre"
@@ -410,8 +429,9 @@ input[type=submit] {
             "mensaje mensaje"
             "privacidad enviar"
         ;
+    }
+
+
+
+
 }
-
-
-
-
