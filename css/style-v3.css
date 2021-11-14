@@ -301,7 +301,7 @@ div.col30{
     display:grid;
     align-content: stretch;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background-color: rgb(91,176,167, 0.4);
     width: 95%;
     padding: 2%;
@@ -320,6 +320,168 @@ div.col70{
     padding: 3%;
 }
 
+/********** HABILIDADES ***********/
+
+
+/*creamos la  cuadricula que envuelve todas las habilidades
+y estasa salen en 2 columnas*/
+ul.nested-grid{
+    display:grid;
+    grid-template-columns: 47% 47%;
+    grid grid-template-areas: 
+                            "storyline photoshop"
+                            "illustrator css"
+                            "html js"
+                            "mysql java"
+                            "jira ingles"
+                            ; 
+    list-style: none;/*Quitarle el puntito de la viñeta a las ul*/
+    padding: 2%;
+    gap:5%;
+    margin: 6% 0; /*superior e inferior solo*/
+}
+
+/*nombre de las areas*/
+li#h-storyline{
+    grid-area: storyline;
+    grid-column:1/2;
+    grid-row:1/2;
+}
+li#h-Photoshop{
+    grid-area: photoshop;
+    grid-column:2/3;
+    grid-row:1/2;
+}
+li#h-illustrator{
+    grid-area: illustrator;
+    grid-column:1/2;
+    grid-row:2/3;
+}
+li#h-CSS{
+    grid-area: css;
+    grid-column:2/3;
+    grid-row:2/3;
+}
+li#h-html{
+    grid-area: html;
+    grid-column:1/2;
+    grid-row:3/4;
+}
+li#h-JS{
+    grid-area: js;
+    grid-column:2/3;
+    grid-row:3/4;
+}
+li#h-MySQL{
+    grid-area: mysql;
+    grid-column:1/2;
+    grid-row:4/5;
+}
+li#h-Java{
+    grid-area: java;
+    grid-column:2/3;
+    grid-row:4/5;
+}
+li#h-jira{
+    grid-area: jira;
+    grid-column:1/2;
+    grid-row:5/6;
+}
+li#h-ingles{
+    grid-area: ingles;
+    grid-column:2/3;
+    grid-row:5/6;
+}
+
+/*Formatos de las barritas*/
+
+/*barrita de base que representa el 100% de la habilidad*/
+.porcentaje-total{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #ffffff;
+    display: block;
+    margin-bottom:15px;
+}
+
+/*barrita que representa el % adquirido de la habilidad*/
+.porcentaje{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #5BB0A7;
+    height: 100%;
+    margin-bottom:15px;
+}
+
+span {
+    display:inline-block;
+}
+
+/********** PROYECTOS ***********/
+.project img{
+    width: 100%;
+}
+
+/*Contenedor de todos los proyectos*/
+#proyectos .nested-grid{
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    gap:3%;
+    margin:3% 0;
+    padding: 0 0 4% 0;
+    /* border:coral solid 1px; BORRAR*/
+}
+
+/*Contenedor de cada proyecto*/
+div.project.contenedor{
+    display: grid;
+    /*border:blue solid 1px; BORRAR*/
+   /*  grid-template-rows: 50% repeat(2 25%); */
+    align-content: stretch;
+}
+
+/********** REFERENCIAS ***********/
+/* caract por defecto de las imagenes*/
+#referencias-ref img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 5%;
+}
+
+/*Apariencia de las cajitas de texto*/
+.txt-ref{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+    background-color: #ffffff;
+}
+
+/*contenedor grid de las referencias*/
+#referencias .contenedor-70-30{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: minmax(150px, auto);
+    align-content: stretch; 
+    margin:20px 0;
+    row-gap: 3em;
+}
+
+/*Contenedor de los txt de referencias*/
+#referencias div.col30{
+    display:grid;
+    align-items: baseline;
+    justify-items: end;
+    justify-content: start;
+    align-content: center;
+    background-color: rgb(91,176,167, 0.4);
+    width: 95%;
+    padding: 2%;
+}
+
+div.col30 p{
+     width: 100%; 
+}
 
 
 /********** FORM CONTACTO ***********/
@@ -414,7 +576,7 @@ input[type=submit] {
     .grid{
         display:grid;
         grid-template-columns: 1fr 15fr 1fr;
-        gap:2%;
+
     }
 
     /*la ubicacion del booton inicial cambia*/
@@ -475,6 +637,9 @@ input[type=submit] {
     display: none;
 }
 
+
+
+
 /*En dispositivo móvil*/
 @media (max-width: 500px) {
     
@@ -520,4 +685,5 @@ input[type=submit] {
 
 
 
+}
 }
