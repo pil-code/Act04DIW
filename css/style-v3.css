@@ -566,9 +566,11 @@ input[type=submit] {
     justify-self: end;
 }
 /*******************Estilos de Footer*******************/
-footer{
-    background-color: #AA8A7B;
-    text-align: center;
+
+footer *{
+    margin:0;
+    padding:0;
+    color: #ffffff;
 }
 
 footer p{
@@ -576,6 +578,88 @@ footer p{
     font-family:Cambria;
     size: 12px;
 }
+
+/*contenedor del footer con grid*/
+footer .container{
+    background-color: #AA8A7B;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap:5%;
+    padding: 2%;
+}
+
+/*contenedor  de los iconos*/
+footer .iconos{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 3%;
+    grid-gap:1%;
+    
+}
+
+/*eliminamos los puntos de las viñetas*/
+.iconos li{
+    list-style: none;
+}
+
+.iconos li a{
+    display:grid;
+    align-content: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F2EDEA;
+    text-decoration: none;
+}
+
+/*color de los iconos*/
+footer .iconos i{
+    color: #AA8A7B;
+    font-size: 1.3em;
+}
+
+/*enlaces*/
+.enlacesrapidos{
+    position: relative;
+}
+
+.enlacesrapidos li{
+    list-style: none;
+}
+
+.enlacesrapidos li a{
+    text-decoration: none;
+    font-family: Cambria;
+    size: 12px;
+}
+
+/*contacto*/
+
+.contacto li{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contacto li a{
+    text-decoration: none;
+    font-family: Cambria;
+}
+
+/*versionado*/
+.versionado{
+    width: 100%;
+    background-color: #443731;
+    display: inline-block;
+text-align: center;
+}
+.versionado span{
+    font-family: Cambria;
+    font-size: 0.6em;
+    margin:0 3%;
+}
+
 
 /*******************MEDIA QUERIES*******************/
 
