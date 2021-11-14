@@ -419,6 +419,32 @@ span {
     display:inline-block;
 }
 
+/********** PROYECTOS ***********/
+.project img{
+    width: 100%;
+}
+
+/*Contenedor de todos los proyectos*/
+#proyectos .nested-grid{
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    gap:3%;
+    margin:3% 0;
+    padding: 0 0 4% 0;
+    /* border:coral solid 1px; BORRAR*/
+}
+
+/*Contenedor de cada proyecto*/
+div.project.contenedor{
+    display: grid;
+    /*border:blue solid 1px; BORRAR*/
+   /*  grid-template-rows: 50% repeat(2 25%); */
+    align-content: stretch;
+}
+
+
+
 /********** FORM CONTACTO ***********/
 
 /*disposición de los elementos*/
