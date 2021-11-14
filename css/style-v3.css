@@ -565,7 +565,17 @@ input[type=submit] {
     align-self: center;
     justify-self: end;
 }
+/*******************Estilos de Footer*******************/
+footer{
+    background-color: #AA8A7B;
+    text-align: center;
+}
 
+footer p{
+    color: #ffffff;
+    font-family:Cambria;
+    size: 12px;
+}
 
 /*******************MEDIA QUERIES*******************/
 
