@@ -199,10 +199,14 @@ header .boton{
 
 /*ELEMENTO NAV*/
 
-/*posicionamos la barra*/
+/*posicionamos la barra: NO FUNCIONA COMO ME GUSTARÍA*/
 nav{
     display:inline-grid;
     justify-content: center;
+    position:fixed;
+    top: 10%;
+    right: 7%; /*Ubicación barra*/
+    z-index:2;
 }
 
 
