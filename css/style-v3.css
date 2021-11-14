@@ -131,10 +131,7 @@ a:hover {
     color: #ffffff;
 }
 
-nav#barra {
-    
-    position:sticky;
-}
+
 
 /************************* GRID *************************/
 /*1º: creamos el contenedor grid de toda la pag*/
