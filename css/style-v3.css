@@ -443,6 +443,45 @@ div.project.contenedor{
     align-content: stretch;
 }
 
+/********** REFERENCIAS ***********/
+/* caract por defecto de las imagenes*/
+#referencias-ref img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 5%;
+}
+
+/*Apariencia de las cajitas de texto*/
+.txt-ref{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+    background-color: #ffffff;
+}
+
+/*contenedor grid de las referencias*/
+#referencias .contenedor-70-30{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: minmax(150px, auto);
+    align-content: stretch; 
+    margin:20px 0;
+    row-gap: 3em;
+}
+
+/*Contenedor de los txt de referencias*/
+#referencias div.col30{
+    display:grid;
+    align-items: baseline;
+    justify-items: end;
+    justify-content: start;
+    align-content: center;
+    background-color: rgb(91,176,167, 0.4);
+    width: 95%;
+    padding: 2%;
+}
+
+div.col30 p{
+     width: 100%; 
+}
 
 
 /********** FORM CONTACTO ***********/
@@ -537,7 +576,7 @@ input[type=submit] {
     .grid{
         display:grid;
         grid-template-columns: 1fr 15fr 1fr;
-        gap:2%;
+
     }
 
     /*la ubicacion del booton inicial cambia*/
