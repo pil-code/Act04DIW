@@ -2,59 +2,54 @@
 <html lang=en class="index">
     <head>
         <meta charset="UTF-8">
-        <title>Pilar Navío Colón</title>
+        <title>Pilar Navío Colón act4</title>
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/style-v3.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"> <!--añadir libreria de iconos-->
         <link rel="icon" type="image/jpg" href="images/header_01.jpg" />
     </head>
 
-    <body class="grid">
-        <header class="item-header" id="header-bg" style="background-image: url(images/chica-it.png)";>
-            <div id="header-contenedor">
-                <div class="header-caja">
+    <body>
+        <div class="grid">
+            <header class="item-grid nested-grid" id="header">
+                <div class="contenedor-txt">
                     <h1>Pilar Navío Colón</h1>
                     <h3 class="blanco">Web Developer</h3>
                 </div>
-                <a class="boton-ini" href=#perfil>¡Hola!</a>
-            </div>
-        </header>
-         
+                <a class="boton" href=#perfil>¡Hola!</a>
+            </header>
 
+            <nav class="item-grid" id="barra">
+                <ul>
+                    <li><a href=#perfil>Perfil</a></li>
+                    <li><a href=#experiencia>Experiencia</a></li>
+                    <li><a href=#formacion>Formación</a></li>
+                    <li><a href=#habilidades>Habilidades</a></li>
+                    <li><a href=#proyectos>Proyectos</a></li>
+                    <li><a href=#referencias>Referencias</a></li>
+                    <li><a href=#contacto>Contacto</a></li>
+                </ul>
+            </nav>
 
-        <nav class="item-barra">
-            <ul class="vacio">
-                <li><a href=#perfil>Perfil</a></li>
-                <li><a href=#experiencia>Experiencia</a></li>
-                <li><a href=#formacion>Formación</a></li>
-                <li><a href=#habilidades>Habilidades</a></li>
-                <li><a href=#proyectos>Proyectos</a></li>
-                <li><a href=#referencias>Referencias</a></li>
-                <li><a href=#contacto>Contacto</a></li>
-            </ul>
-        </nav>
-        
-
-        <main class= " item-main">
-            <section class="item-perfil bg-blanco" id="perfil">
-                
+            <main  class="item-grid nested-grid" id="main">
+                <section class="item-perfil bg-blanco" id="perfil">
                     <div>
                         <h2>Perfil</h2>
                         <p>Soy <big>e-learning</big> developer en proceso de ser <big>web developer</big></p>
                     </div>
                     <hr> <!--línea separadora-->
-                    <div id="presentacion">
-                        <div class="columna3" id="aboutme">
+                    <div id="contenedor-perfil">
+                        <div class="item-perfil" id="aboutme-cont">
                             <h3>Sobre mí</h3>
-                            <p>La curiosidad me ha llevado por los caminos de la neurociencia, el diseño instruccional y la educación elearning. Ahora empiezo a despegar en mi aventura por el <big>desarrollo web</big>.<br><br>
-                            Me gusta cuidar los detalles, la organización y disfruto trabajando en equipo.</p>
+                            <p>La curiosidad me ha llevado por los caminos de la neurociencia, el diseño instruccional y la educación elearning. Ahora empiezo a despegar en mi aventura por el <big>desarrollo web</big>.</p><br>
+                            <p>Me gusta cuidar los detalles, la organización y disfruto trabajando en equipo.</p>
                         </div>
 
-                        <div class="columna3" >
+                        <div class="item-perfil" id="thisisme-cont" >
                             <img id="mi-foto" src="images/thisisme.jpg" alt="mi foto">
                         </div>
 
-                        <div class=" columna3">
+                        <div class="item-perfil" id="detalles-cont">
                             <h3>Más detalles</h3>
                             <div id="detalles">
                                 <div>
@@ -88,17 +83,16 @@
                             
                         </div>
                     </div>
-               
-            </section>
+                </section>
 
-            <section class=" item-experiencia bg-gris" id="experiencia">
-                    <div class="fila">
+                <section class="item-experiencia bg-gris" id="experiencia">
+                    <div>
                         <h2>Experiencia</h2>
                         <p class="cursiva">"La experiencia no es lo que te sucede, sino lo que haces con lo que te sucede"</p>
                         <p class="derecha">Aldous Huxley</p>
                     </div>
                     <hr> <!--línea separadora-->
-                    <div class="fila30-70">
+                    <div class="contenedor-30-70">
                         <div class="col30">
                             <h4>Eritia Grupo Cualtis</h4>
                             <p class="small">Dic 2018 - actualidad</p>
@@ -115,9 +109,7 @@
                                 <li>Mantenimiento webs.</li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="fila30-70">
                         <div class="col30">
                             <h4>Eritia Grupo Cualtis</h4>
                             <p class="small">Dic 2016 - Dic 2018</p>
@@ -132,18 +124,17 @@
                             </ul>
                         </div>
                     </div>
-                
-                
-            </section>
+                </section>
 
-            <section class="item-formacion bg-blanco">
-                    <div class="fila">
+                <section class="item-formacion bg-blanco" id="formacion">
+                    <div>
                         <h2>Formación</h2>
                         <p class="cursiva">"Dime y lo olvido, enseñame y lo recuerdo, involúcrame y lo aprendo."</p>
                         <p class="derecha">Benjamin Franklin</p>
                     </div>
                     <hr> <!--línea separadora-->
-                    <div class="fila30-70">
+                    <div class="contenedor-30-70">
+
                         <div class="col30">
                             <h4>Instituto Tecnológico Edix</h4>
                             <p class="small">Sep 2020 - actualidad</p>
@@ -156,9 +147,7 @@
                                 <li>Proyecto final: Próximamente.</li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="fila30-70">
                         <div class="col30">
                             <h4>Instituto Tecnológico Telefónica</h4>
                             <p class="small">Mar 2020 - Jun 2020</p>
@@ -170,9 +159,7 @@
                                 <li>Conocimientos básicos sobre informática y programación.</li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="fila30-70">
                         <div class="col30">
                             <h4>Universidad Antonio de Nebrija</h4>
                             <p class="small">Sep 2016 - Jun 2017</p>
@@ -186,9 +173,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="fila30-70">
                         <div class="col30">
                             <h4>Universitat de València</h4>
                             <p class="small">Sep 2015 - Jun 2016</p>
@@ -201,9 +186,7 @@
                                 <li>Proyecto final: Lenguaje pragmático en Trastorno del Espectro Autista.</li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="fila30-70">
                         <div class="col30">
                             <h4>Universidad de Córdoba</h4>
                             <p class="small">Sep 2012 - Jun 2014</p>
@@ -212,9 +195,7 @@
                         <div class="col70">
                             <h4>Licenciatura en Psicopedagogía</h4>
                         </div>
-                    </div>
 
-                    <div class="fila30-70">
                         <div class="col30">
                             <h4>Universidad de Córdoba</h4>
                             <p class="small">Sep 2009 - Jun 2012</p>
@@ -224,146 +205,127 @@
                             <h4>Diplomatura en Magisterio <br> Educación Primaria</h4>
                         </div>
                     </div>
-                
 
-            </section>
+                </section>
 
-            <section class="item-habilidades bg-gris" id="habilidades">
+                <section class="item-habilidades bg-gris" id="habilidades">
                     <div class="fila">
                         <h2>Habilidades</h2>
                         <p class="cursiva">"L4 1n73193nc14 35 11 c4p4c1d4d p4r4 4d4p74r53 4l c4mb10."</p>
                         <p class="derecha">573ph3n H42k1n9</p>
                     </div>
                     <hr> <!--línea separadora-->
-                    <ul class="columna-habilidades"> 
-                        <li>
+                    <ul class= "nested-grid">
+                        <li id="h-storyline">
                             <span class="texto">Storyline</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 95%;"></div>
                             </span>
                         </li>
-                        <li id="Photoshop">
+                        <li id="h-Photoshop">
                             <span class="texto">Photoshop</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 70%;"></div>
                             </span>
                         </li>
-                        <li>
+                        <li id="h-illustrator>
                             <span class="texto">Illustrator</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 60%;"></div>
                             </span>
                         </li>
-                        <li id="CSS">
+                        <li id="h-CSS">
                             <span class="texto">CSS</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 40%;"></div>
                             </span>
                         </li>
-                        <li>
+                        <li id="h-html>
                             <span class="texto">HTML</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 40%;"></div>
                             </span>
                         </li>
                     
-                        <li id="JS">
+                        <li id="h-JS">
                             <span class="texto">JavaScript</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 95%;"></div>
                             </span>
                         </li>
-                        <li id="MySQL">
+                        <li id="h-MySQL">
                             <span class="texto">MySQL</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 60%;"></div>
                             </span>
                         </li>
-                        <li id="Java">
+                        <li id="h-Java">
                             <span class="texto">Java</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 60%;"></div>
                             </span>
                         </li>
-                        <li>
+                        <li id="h-jira>
                             <span class="texto">Jira</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 40%;"></div>
                             </span>
                         </li>
-                        <li>
+                        <li id="h-ingles>
                             <span class="texto">Inglés</span>
                             <span class="porcentaje-total">
                                 <div class="porcentaje" style="width: 70%;"></div>
                             </span>
                         </li>
-            </section>
+                    </ul>
 
-            <section class="item-proyectos bg-blanco row" id="proyectos">
-            
+                </section>
+
+                <section class="item-proyectos bg-blanco" id="proyectos">
                     <div class="fila">
                         <h2>Proyectos</h2>
                         <p class="cursiva">"Cuida los pequeños detalles. Un pequeño agujero puede hundir un gran barco."</p>
                         <p class="derecha">Benjamin Franklin</p>
                     </div>
                     <hr> <!--línea separadora-->
-                
-                    
-                    <div id="contenedor-proyectos">
-
-
-                    <div class="project" id="proy1">
-                        <div class="project-img"><img src="images/proyecto1.png" alt="Proyecto 2"></div>
-                        <div class="project-info">
+                    <div class="nested-grid"> <!--contenedor principal de proyectos-->
+                        <div class="project contenedor" id="proy1">
+                            <img src="images/proyecto1.png" alt="Proyecto 1">
+                            <p>p1:Configuración de paquete SCORM para que vuelque en la plataforma LMS el porcentaje de avance del curso. </p>
+                            <br>
+                            <p class="small">Herramientas: Storyline + JavaScript</p>
+                        </div>
+    
+                        <div class="project contenedor" id="proy2">
+                            <img src="images/proyecto2.png" alt="Proyecto 2">
+                            <p>p2: Navegación desbloqueada por las diapositivas que ya han sido visitadas. </p>
+                            <br>
+                            <p class="small">Herramientas: Storyline + JavaScript</p>
+                        </div>
+    
+                        <div class="project contenedor" id="proy3">
+                            <img src="images/proyecto3.png" alt="Proyecto 3">
+                            <p>P3:Recuperación de datos de la plataforma LMS en paquete SCORM. </p>
+                            <br>
+                            <p class="small">Herramientas: Storyline + JavaScript</p>
+                        </div>
+    
+                        <div class="project contenedor" id="proy4">
+                            <img src="images/proyecto1.png" alt="Proyecto 4">
                             <p>Configuración de paquete SCORM para que vuelque en la plataforma LMS el porcentaje de avance del curso. </p>
                             <br>
                             <p class="small">Herramientas: Storyline + JavaScript</p>
                         </div>
                     </div>
+                </section>
 
-                    <div class="project" id="proy2">
-                        <div class="project-img"><img src="images/proyecto2.png" alt="Proyecto 2"></div>
-                        <div class="project-info">
-                            <p>Navegación desbloqueada por las diapositivas que ya han sido visitadas. </p>
-                            <br>
-                            <p class="small">Herramientas: Storyline + JavaScript</p>
-                        </div>
-                    </div>
-
-                    <div class="project" id="proy3">
-                        <div class="project-img"><img src="images/proyecto3.png" alt="Proyecto 2"></div>
-                        <div class="project-info">
-                            <p>Recuperación de datos de la plataforma LMS en paquete SCORM. </p>
-                            <br>
-                            <p class="small">Herramientas: Storyline + JavaScript</p>
-                        </div>
-                    </div>
-
-                    <div class="project" id="proy4">
-                        <div class="project-img"><img src="images/proyecto1.png" alt="Proyecto 2"></div>
-                        <div class="project-info">
-                            <p>Configuración de paquete SCORM para que vuelque en la plataforma LMS el porcentaje de avance del curso. </p>
-                            <br>
-                            <p class="small">Herramientas: Storyline + JavaScript</p>
-                        </div>
-                    </div>
-                    
-                    </div>
-
-
-                
-
-            </section>
-
-            <section class="item-referencias bg-gris" id="referencias">
-                <div class="contenedor">
+                <section class="item-referencias bg-gris" id="referencias">
                     <div class="fila">
                         <h2>Referencias</h2>
                         <p class="cursiva">Lo que se dice por ahí...</p>
                     </div>
                     <hr> <!--línea separadora-->
-                </div>
-                <section>
+
                     <div class="contenedor">
                         <div id="tarjetas">
                             
@@ -390,52 +352,84 @@
                             </div>
                         </div>
                         
-
                     </div>
- 
+                    
+                        
+
                 </section>
-            </section>
 
-            <section class="item-contacto bg-blanco" id="contacto">
-                <div class="contenedor">
-                    <div class="fila">
+                <section class="item-contacto bg-blanco" id="contacto">
+                    <div>
                         <h2>Contacto</h2>
-                        <p class="cursiva">¿Hablamos?</p>
-
+                        <p>¿Hablamos?</p>
                     </div>
                     <hr> <!--línea separadora-->
-                </div>
-                <section>
+                    <form class= "nested-grid">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre"></input>
+                        <input type="email" id="email" name="email" placeholder="Email"></input>
+                        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" cols="50"></textarea>
+                        <div id="cont-privacidad">
+                            <input type="checkbox" id="privacidad" name="privacidad" value="Si"></input>
+                            <label class="small" for="privacidad">Acepto la política de privacidad</label><br>
+                        </div>
+                        <input id="submit" type="submit" value="Enviar">
                         
-                        <form>
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre"></input>
-                            <input type="email" id="email" name="email" placeholder="Email"></input>
-                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" cols="50"></textarea>
-                            <div id="flex-space-bt">
-                                <div id="cont-privacidad">
-                                    <input type="checkbox" id="cb-privacidad" name="cb-privacidad" value="Si"></input>
-                                    <label class="small" for="pprivacidad">Acepto la política de privacidad</label><br>
-                                </div>
-
-                                <input type="submit" value="Enviar">
-                            </div>
-                        </form>
-
-
-
+                    </form>
                 </section>
-            </section>
+            </main>
 
-            
+            <footer  class="item-grid">
+                <div class="container">
+                    <div class="aboutme">
+                        <h2>Sobre mi</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam feugiat dui ex, non aliquet sem eleifend sed.
+                            Vestibulum ut nulla sit amet ipsum aliquam ultrices sit amet a est. Morbi volutpat fringilla nisl ut egestas.
+                            Aliquam cursus hendrerit massa in efficitur. Mauris ultricies vulputate sapien vel dignissim. Suspendisse vel nisi tincidunt.
+                        </p>
+                        <ul class="iconos">
+                            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-github"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
+                        </ul>
+                    </div>
 
-            
-        </main>
+                    <div class="enlacesrapidos">
+                        <h2>Enlaces</h2>
+                        <ul>
+                            <li><a href="#">Sobre mi</a></li>
+                            <li><a href="#">Formación</a></li>
+                            <li><a href="#">Proyectos</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
 
-        <footer class="item-footer">
-            <p>Pilar Navío Colón</p>
-            <p>v1.2.2</p>
-            <p>09/11/21</p>
-        </footer>
+                    <div class="contacto">
+                        <h2>Contacta conmigo</h2>
+                        <ul class="info">
+                            <li>
+                                <p>123 Calle inventada <br>
+                                Madrid, 28000</p>
+                            </li>
 
-        
+                            <li>
+                                <p><a href="tel:666123456">666123456</a></p>
+                            </li>
+
+                            <li>
+                                <p><a href="mailto:pilar@gmail.com">pilar@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="versionado">
+                    <span>Pilar Navío Colón</span>
+                    <span>v1.3</span>
+                    <span>14/11/21</span>
+                </div>
+            </footer>
+        </div>
     </body>

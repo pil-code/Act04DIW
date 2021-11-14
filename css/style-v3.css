@@ -131,10 +131,7 @@ a:hover {
     color: #ffffff;
 }
 
-nav#barra {
-    
-    position:sticky;
-}
+
 
 /************************* GRID *************************/
 /*1º: creamos el contenedor grid de toda la pag*/
@@ -419,6 +416,94 @@ span {
     display:inline-block;
 }
 
+/********** REFERENCIAS (seccion para practicar z-index ***********/
+
+/*Contenedor que incluyen todas las referencias*/
+#tarjetas{
+    display: flex;
+    flex-direction:column;
+    /*border: 4px solid orchid; BORRAR*/
+
+}
+
+/*fila con cada referencia*/
+.tarjeta-ref{
+    display: flex;
+    flex-flow:row no-wrap;
+    margin-top: 10px;
+    /*border: 2px solid blue; BORRAR*/ 
+}
+
+/*Alteramos el orden para alternar las filas de referencias
+y la posicionamos para el z-index*/
+.tarjeta-ref#ref2{
+    flex-flow: row-reverse nowrap;
+    /*border: 3px solid greenyellow; BORRAR*/
+    position: relative;
+    top: -60px;
+    text-align: right;
+}
+
+/*Posicionamos la ultima referencia para el z-index*/
+.tarjeta-ref#ref3{
+    flex-flow:row;
+    /*border: 3px solid darkred; BORRAR*/
+    position:relative;
+    top: -100px;
+}
+
+/* caract por defecto de las imagenes*/
+.tarjeta-ref img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50%;
+    flex-shrink: 10;
+}
+
+/*Apariencia de las cajitas de texto*/
+.txt-ref{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    padding: 5%;
+    background-color: #ffffff;
+    display:flex;
+    flex-direction: column;
+
+}
+
+#ref1 .txt-ref{
+    background-color:rgb(242, 237, 234);
+    /*padding-top: 0; /*le quito el padding superior para que sea compatible con el solapamiento de capas*/
+    justify-content: start;
+}
+#ref2 .txt-ref{
+    background-color:#ffffff;
+    padding: 5%; 
+    justify-content: center;
+}
+#ref3 .txt-ref{
+    background-color:rgb(242, 237, 234);
+    justify-content: flex-end;
+}
+
+
+
+/*z-index para las img de las referencias*/
+#ref1 img{
+    z-index: 3;
+}
+
+#ref2 img{
+    z-index: 1;
+    width: 60%;    /*modificamos el tamaño de esta img*/ 
+    flex-shrink: 10;
+}
+
+#ref3 img{
+    z-index: 2;
+}
+
+
+
 /********** PROYECTOS ***********/
 .project img{
     width: 100%;
@@ -443,45 +528,6 @@ div.project.contenedor{
     align-content: stretch;
 }
 
-/********** REFERENCIAS ***********/
-/* caract por defecto de las imagenes*/
-#referencias-ref img{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 5%;
-}
-
-/*Apariencia de las cajitas de texto*/
-.txt-ref{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 5%;
-    background-color: #ffffff;
-}
-
-/*contenedor grid de las referencias*/
-#referencias .contenedor-70-30{
-    display:grid;
-    grid-template-columns: 70% 30%;
-    grid-auto-rows: minmax(150px, auto);
-    align-content: stretch; 
-    margin:20px 0;
-    row-gap: 3em;
-}
-
-/*Contenedor de los txt de referencias*/
-#referencias div.col30{
-    display:grid;
-    align-items: baseline;
-    justify-items: end;
-    justify-content: start;
-    align-content: center;
-    background-color: rgb(91,176,167, 0.4);
-    width: 95%;
-    padding: 2%;
-}
-
-div.col30 p{
-     width: 100%; 
-}
 
 
 /********** FORM CONTACTO ***********/
@@ -566,9 +612,11 @@ input[type=submit] {
     justify-self: end;
 }
 /*******************Estilos de Footer*******************/
-footer{
-    background-color: #AA8A7B;
-    text-align: center;
+
+footer *{
+    margin:0;
+    padding:0;
+    color: #ffffff;
 }
 
 footer p{
@@ -576,6 +624,88 @@ footer p{
     font-family:Cambria;
     size: 12px;
 }
+
+/*contenedor del footer con grid*/
+footer .container{
+    background-color: #AA8A7B;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap:5%;
+    padding: 2%;
+}
+
+/*contenedor  de los iconos*/
+footer .iconos{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 3%;
+    grid-gap:1%;
+    
+}
+
+/*eliminamos los puntos de las viñetas*/
+.iconos li{
+    list-style: none;
+}
+
+.iconos li a{
+    display:grid;
+    align-content: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F2EDEA;
+    text-decoration: none;
+}
+
+/*color de los iconos*/
+footer .iconos i{
+    color: #AA8A7B;
+    font-size: 1.3em;
+}
+
+/*enlaces*/
+.enlacesrapidos{
+    position: relative;
+}
+
+.enlacesrapidos li{
+    list-style: none;
+}
+
+.enlacesrapidos li a{
+    text-decoration: none;
+    font-family: Cambria;
+    size: 12px;
+}
+
+/*contacto*/
+
+.contacto li{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contacto li a{
+    text-decoration: none;
+    font-family: Cambria;
+}
+
+/*versionado*/
+.versionado{
+    width: 100%;
+    background-color: #443731;
+    display: inline-block;
+text-align: center;
+}
+.versionado span{
+    font-family: Cambria;
+    font-size: 0.6em;
+    margin:0 3%;
+}
+
 
 /*******************MEDIA QUERIES*******************/
 
