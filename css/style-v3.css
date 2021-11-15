@@ -191,8 +191,10 @@ header .contenedor-txt{
 /*posicionamos el boton hola*/
 header .boton{
     grid-column: 4/5;
-    grid-row: 3/4;
-    justify-self: center;
+    grid-row: 4/5;
+    align-self: end;
+    right: 7%; /*Ubicación barra*/
+    z-index:2;
     align-self: end;
 }
 
@@ -203,10 +205,10 @@ header .boton{
 nav{
     display:inline-grid;
     justify-content: center;
-    position:fixed;
     top: 10%;
-    right: 7%; /*Ubicación barra*/
     z-index:2;
+    position:sticky;
+    height: fit-content;
 }
 
 
@@ -723,6 +725,22 @@ text-align: center;
 
     }
 
+    #barra {
+        display: none;
+    }
+
+    /* BOTON MENU HAMBURGUESA SIN TERMINAR
+    #barra-movil{
+        
+        justify-self: end;
+        border: 1px solid rgb(170, 138, 123);
+        background-color: rgb(242, 237, 234);
+        color: rgb(170, 138, 123);
+        padding: 20px;
+        
+    }
+*/
+
     /*la ubicacion del booton inicial cambia*/
     header .boton{
         grid-column: 4/5;
@@ -780,6 +798,19 @@ text-align: center;
 #barra, a.boton {
     display: none;
 }
+
+/*Cuando cambia el tamaño del navegador,
+los z-index de las referencias se invierten*/
+#ref1 .txt-ref{
+    z-index: 4; /*para que aparezca por encima de la img*/
+}
+#ref2 .txt-ref{
+    z-index: 5; /*para que aparezca por encima de la img*/
+}
+#ref3 .txt-ref{
+    z-index: 6; /*para que aparezca por encima de la img*/
+}
+
 
 
 
