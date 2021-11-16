@@ -857,8 +857,17 @@ los z-index de las referencias se invierten*/
         ;
     }
 
-
-
+/*cambio en las referencias*/
+/* #tarjetas {
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta-ref img {
+    display:none;
+}
+.txt-ref{
+    position:relative;
+} */
 
 }
 }
