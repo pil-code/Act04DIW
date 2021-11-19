@@ -139,15 +139,16 @@ a:hover {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    gap:0;
+    grid-gap:0;
     justify-items: stretch;
     align-items:stretch;
 }
-/*2º: aplicamosla clase item-grid a los principales elementos
+/*2º: aplicamos la clase item-grid a los principales elementos
 para crear la estructura: header, barra, main y footer*/
-.grid .item-grid{
-    border:1px dotted greenyellow;  /*BORRAR*/
+/*.grid .item-grid{
+    border:1px dotted greenyellow;  BORRAR: para saber los límites de cada container
 }
+*/
 
 /*3º: indicamos las áreas de cada elementos principal*/
 .item-grid#header{
@@ -201,7 +202,7 @@ header .boton{
 
 /*ELEMENTO NAV*/
 
-/*posicionamos la barra: NO FUNCIONA COMO ME GUSTARÍA*/
+/*posicionamos la barra:*/
 nav{
     display:inline-grid;
     justify-content: center;
@@ -478,7 +479,6 @@ y la posicionamos para el z-index*/
 
 #ref1 .txt-ref{
     background-color:rgb(242, 237, 234);
-    /*padding-top: 0; /*le quito el padding superior para que sea compatible con el solapamiento de capas*/
     justify-content: start;
 }
 #ref2 .txt-ref{
@@ -530,7 +530,6 @@ y la posicionamos para el z-index*/
 div.project.contenedor{
     display: grid;
     /*border:blue solid 1px; BORRAR*/
-   /*  grid-template-rows: 50% repeat(2 25%); */
     align-content: stretch;
 }
 
@@ -704,7 +703,7 @@ footer .iconos i{
     width: 100%;
     background-color: #443731;
     display: inline-block;
-text-align: center;
+    text-align: center;
 }
 .versionado span{
     font-family: Cambria;
@@ -725,21 +724,6 @@ text-align: center;
 
     }
 
-    #barra {
-        display: none;
-    }
-
-    /* BOTON MENU HAMBURGUESA SIN TERMINAR
-    #barra-movil{
-        
-        justify-self: end;
-        border: 1px solid rgb(170, 138, 123);
-        background-color: rgb(242, 237, 234);
-        color: rgb(170, 138, 123);
-        padding: 20px;
-        
-    }
-*/
 
     /*la ubicacion del booton inicial cambia*/
     header .boton{
@@ -794,22 +778,23 @@ text-align: center;
 
 
 @media (max-width: 680px) {
-/*El boton inicial y la barra desaparece*/
-#barra, a.boton {
-    display: none;
-}
+    /*El boton inicial y la barra desaparece*/
+    #barra, a.boton {
+        display: none;
+    }
+    
 
-/*Cuando cambia el tamaño del navegador,
-los z-index de las referencias se invierten*/
-#ref1 .txt-ref{
-    z-index: 4; /*para que aparezca por encima de la img*/
-}
-#ref2 .txt-ref{
-    z-index: 5; /*para que aparezca por encima de la img*/
-}
-#ref3 .txt-ref{
-    z-index: 6; /*para que aparezca por encima de la img*/
-}
+    /*Cuando cambia el tamaño del navegador,
+    los z-index de las referencias se invierten*/
+    #ref1 .txt-ref{
+        z-index: 4; /*para que aparezca por encima de la img*/
+    }
+    #ref2 .txt-ref{
+        z-index: 5; /*para que aparezca por encima de la img*/
+    }
+    #ref3 .txt-ref{
+        z-index: 6; /*para que aparezca por encima de la img*/
+    }
 
 
 
@@ -822,6 +807,11 @@ los z-index de las referencias se invierten*/
     header.nested-grid {
         grid-template-rows: 0.5fr 1fr 0.5fr;
     }
+    /* Desaparece el boton "Hola*/
+    .boton, nav li a {
+        display:none;
+    }
+    
 
     /*En el perfil, cada elemento aparece en una fila*/
     #contenedor-perfil{
@@ -857,17 +847,20 @@ los z-index de las referencias se invierten*/
         ;
     }
 
-/*cambio en las referencias*/
-/* #tarjetas {
-    display: flex;
-    flex-direction: column;
-}
-.tarjeta-ref img {
-    display:none;
-}
-.txt-ref{
-    position:relative;
-} */
+    /*cambio en las referencias
+    a filas únicas y sin img*/
+        div.tarjeta-ref {
+            flex-flow: row-reverse nowrap;
+            position: relative;
+            text-align: left;
+        }
+        .tarjeta-ref#ref2, .tarjeta-ref#ref3 {
+            top: 0;
+        }
 
-}
+        #tarjetas img{
+        display:none;
+        }
+
+    }
 }
